@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Text Scanner",
+  "name": "Text Copier",
   "version": "1.0",
-  "description": "Scans text from articles and logs it to the console.",
-  "permissions": ["activeTab"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "description": "Copies the text of the current webpage.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -15,12 +15,9 @@
       "128": "icon128.png"
     }
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]  
-    }
-  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
