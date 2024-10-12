@@ -1,55 +1,38 @@
-// src/components/Footer.js
-import React from "react"; // Import React
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
-// import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Instagram icon
+import React from 'react';
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="bg-white shadow-none mb-4"> {/* White background, no shadow, and margin-bottom added */}
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Left section: links */}
-          <div className="mb-4 md:mb-0">
-            <h5 className="text-lg font-bold mb-2 text-pop">Quick Links</h5>
-            <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-primary hover:text-pop">
-                  Back to home
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-primary hover:text-pop">
-                  Contact +1(682) 261-6731
-                </a>
-              </li>
+    <footer className="bg-black text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap justify-between items-center">
+          {/* Copyright */}
+          <div className="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
+            <p>&copy; 2024 Checkmate. All rights reserved.</p>
+          </div>
+
+          {/* Links */}
+          <div className="w-full md:w-1/3 text-center mb-4 md:mb-0">
+            <ul className="flex justify-center space-x-4">
+              <li><a href="#" className="hover:text-gray-300">About</a></li>
+              <li><a href="#" className="hover:text-gray-300">Privacy</a></li>
+              <li><a href="#" className="hover:text-gray-300">Terms</a></li>
+              <li><a href="#" className="hover:text-gray-300">Contact</a></li>
             </ul>
           </div>
 
-          {/* Center section: Instagram icon */}
-          <div className="mb-4 md:mb-0">
-            <h5 className="text-lg font-bold mb-2 text-pop">Follow Us</h5>
-            <div className="flex space-x-4">
-              <a
-                href="https://instagram.com"
-                className="text-primary hover:text-pop"
-                target="_blank" // Open in a new tab
-                rel="noopener noreferrer" // Security best practices
-              >
-                {/* <FontAwesomeIcon icon={faInstagram} className="text-2xl" /> Instagram icon */}
-              </a>
+          {/* Social Media Icons */}
+          <div className="w-full md:w-1/3 text-center md:text-right">
+            <div className="flex justify-center md:justify-end space-x-4">
+              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="Facebook">&#xf082;</a>
+              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="Twitter">&#xf081;</a>
+              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="Instagram">&#xf16d;</a>
+              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="GitHub">&#xf09b;</a>
             </div>
-          </div>
-
-          {/* Right section: copyright */}
-          <div className="text-center md:text-right">
-            <p className="text-sm text-primary">
-              Placeholder Copyright
-            </p>
           </div>
         </div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
