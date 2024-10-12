@@ -2,10 +2,10 @@
   "manifest_version": 3,
   "name": "Text Scanner",
   "version": "1.0",
-  "description": "Scans text from articles.",
+  "description": "Scans text from articles and logs it to the console.",
   "permissions": ["activeTab"],
   "background": {
-    "service_worker": "background.js"  
+    "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
@@ -15,6 +15,12 @@
       "128": "icon128.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

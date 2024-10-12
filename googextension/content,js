@@ -1,0 +1,8 @@
+// This script will run on every page
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "scanText") {
+        const articleText = document.body.innerText; // Get all text from the body
+        console.log("Scanned text:", articleText); // Log the scanned text to the console
+        sendResponse({ text: articleText }); // Optional: send the text back
+    }
+});
