@@ -7,12 +7,12 @@ import Footer from './components/footer';
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
+    <div>
 
       <Navbar></Navbar>
       <Hero></Hero>
       <Footer></Footer>
-    </h1>
+    </div>
   );
 }
 
