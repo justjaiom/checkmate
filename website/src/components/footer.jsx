@@ -1,9 +1,11 @@
 // src/components/Footer.js
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Instagram icon
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-primary py-8"> {/* Dark grey background and primary text color */}
+    <footer className="bg-white shadow-none"> {/* White background and no shadow */}
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left section: links */}
@@ -23,18 +25,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Center section: social media icons */}
+          {/* Center section: Instagram icon */}
           <div className="mb-4 md:mb-0">
             <h5 className="text-lg font-bold mb-2 text-pop">Follow Us</h5>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-primary hover:text-pop">
-                <i className="fab fa-facebook-f"></i> {/* Replace with icons */}
-              </a>
-              <a href="https://twitter.com" className="text-primary hover:text-pop">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="https://instagram.com" className="text-primary hover:text-pop">
-                <i className="fab fa-instagram"></i>
+              <a
+                href="https://instagram.com"
+                className="text-primary hover:text-pop"
+                target="_blank" // Open in a new tab
+                rel="noopener noreferrer" // Security best practices
+              >
+                <FontAwesomeIcon icon={faInstagram} className="text-2xl" /> {/* Instagram icon */}
               </a>
             </div>
           </div>
