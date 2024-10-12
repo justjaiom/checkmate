@@ -5,7 +5,7 @@ import React from "react"; // Import React
 
 const Footer = () => {
   return (
-    <footer className="bg-white shadow-none"> {/* White background and no shadow */}
+    <footer className="bg-white shadow-none mb-4"> {/* White background, no shadow, and margin-bottom added */}
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left section: links */}
