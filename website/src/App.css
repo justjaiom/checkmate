@@ -1,3 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.app-container {
+  font-family: 'Poppins', sans-serif; /* Use Poppins as the font */
+  /* You can add more styles here if needed */
+}
