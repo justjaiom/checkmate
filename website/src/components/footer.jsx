@@ -1,7 +1,7 @@
 // src/components/Footer.js
 import React from "react"; // Import React
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Instagram icon
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
+// import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Instagram icon
 
 const Footer = () => {
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
                 target="_blank" // Open in a new tab
                 rel="noopener noreferrer" // Security best practices
               >
-                <FontAwesomeIcon icon={faInstagram} className="text-2xl" /> {/* Instagram icon */}
+                {/* <FontAwesomeIcon icon={faInstagram} className="text-2xl" /> Instagram icon */}
               </a>
             </div>
           </div>
