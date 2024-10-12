@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --primary: rgb(37,99,235); 
+  --secondary: rgb(147,51,234); 
+  --pop: #db2777;
+}
+
