@@ -1,7 +1,7 @@
 // src/components/Footer.js
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Instagram icon
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
+// import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Instagram icon
 
 const Footer = () => {
   return (
