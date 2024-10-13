@@ -5,7 +5,7 @@ const text = require('../googextension/popup');
 console.log(text); 
 
 
-const YOUR_API_KEY = "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";
+const YOUR_API_KEY = "";
 
 const messages = [
   {
