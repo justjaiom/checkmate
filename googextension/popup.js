@@ -46,6 +46,7 @@ function saveArticleToLocalStorage() {
     console.log('Article saved to LocalStorage:', articleText);
 
     // Restore hidden elements to original styles
+    // Restore the hidden elements to their original display styles
     originalStyles.forEach(item => {
       item.element.style.display = item.display;  // Restore original display
     });
@@ -53,3 +54,7 @@ function saveArticleToLocalStorage() {
     alert('Article content saved to LocalStorage!');
   }, 1000);  // 1-second delay for dynamic content loading
 }
+
+
+const text = articleText;
+module.exports = text;
