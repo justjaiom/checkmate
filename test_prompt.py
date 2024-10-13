@@ -19,7 +19,7 @@ messages = [
     },
 ]
 
-client = OpenAI(api_key=API_KEY, base_url="https://api.perplexity.ai")
+client = OpenAI(api_key=YOUR_API_KEY, base_url="https://api.perplexity.ai")
 
 # chat completion without streaming
 response = str(client.chat.completions.create(
