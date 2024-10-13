@@ -1,23 +1,24 @@
 from openai import OpenAI
+import os
 
-YOUR_API_KEY = "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"
+API_KEY = "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"
 
 messages = [
     {
         "role": "system",
         "content": (
-            "You are an artificial intelligence agent who will identify whether a piece of text includes one or multiple claims. If the text does indeed contain one or multiple claims, you will verify the accuracy of the claim and rank the accuracy on a score of 1 to 100. If the claim or claims is/are inaccurate, then you will also provide a 20 to 30 word correction for each individual claim. Respond EXACTLY in the following format, with all the different claims which you find: **Numerical Ranking;Corrected information;Copy of the claim made;Topic of the information** Please follow this format exactly. Do not choose a number other than between 1 and 100. If a claim is entirely untrue, then choose 1. If there is partial truth or partial misinformation, choose 2 through 99. If the statement is entirely accurate, choose 100."
+            "You are an artificial intelligence agent who will identify whether a piece of text includes one or multiple claims. If the text does indeed contain one or multiple claims, you will verify the accuracy of the claim and rank the accuracy on a score of 1 to 5. If the claim or claims is/are inaccurate, then you will also provide a 20 to 30 word correction for each individual claim. Respond EXACTLY in the following format, with all the different claims which you find: **Numerical Ranking;Corrected information;Copy of the claim made;Topic of the information** Please follow this format exactly. Do not choose a number other than between 1 and 5. If a claim is entirely untrue, then choose 1. If there is partial truth or partial misinformation, choose 2, 3, or 4. If the statement is entirely accurate, choose 5. Remember that more likely than not, it is NOT 1 or 5"
         ),
     },
     {
         "role": "user",
         "content": (
-            "Donald Trump was shot, and the government did it. Tim Walz has an autistic son. There are microchips in vaccines. Receipts may be covered in poisonous BPA. Apple intentionally slows down phones."
+            "Donald Trump was shot, and the government did it. Tim Walz has an autistic son. There are microchips in vaccines. Receipts may be covered in poisonous BPA. Apple intentionally slows down phones. Red meat is good for you. Soy is good for you."
         ),
     },
 ]
 
-client = OpenAI(api_key=YOUR_API_KEY, base_url="https://api.perplexity.ai")
+client = OpenAI(api_key=API_KEY, base_url="https://api.perplexity.ai")
 
 # chat completion without streaming
 response = str(client.chat.completions.create(
