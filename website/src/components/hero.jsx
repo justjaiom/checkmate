@@ -10,40 +10,40 @@ function Hero() {
 
       {/* Right section - text content */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 w-full md:w-3/5 p-6 lg:p-16 text-white flex flex-col">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:mb-2 lg:mb-3">
+        <h1 className="text-2xl 2xl:text-4xl font-bold leading-tight md:mb-2 lg:mb-3">
           Fact-Check Articles with AI
         </h1>
 
-        <p className="text-sm mb-3 2xl:mb-8 xl:text-md 2xl:text-2xl ">
+        <p className="text-xl 2xl:text-2xl mb-3 2xl:mb-8 xl:text-md  ">
           Introducing a Chrome extension that analyzes blog content for accuracy and bias, giving you real-time feedback to ensure that the information you're reading is reliable.
         </p>
 
         {/* Bullet Points Section */}
-        <ul className="text-base md:text-lg lg:text-xl space-y-2 md:space-y-4 xl:text-md">
+        <ul className="text-xl 2xl:text-2xl space-y-2 md:space-y-4">
           {/* Stars */}
           <li className="flex items-center">
-            <span className="text-green-400 mr-2 md:mr-3 text-2xl lg:text-3xl">★</span>
+            <span className="text-white mr-2 md:mr-3 text-2xl lg:text-3xl">★</span>
             Moderately questionable statements highlighted in yellow.
           </li>
           <li className="flex items-center">
-            <span className="text-green-400 mr-2 md:mr-3 text-2xl lg:text-3xl">★</span>
+            <span className="text-white mr-2 md:mr-3 text-2xl lg:text-3xl">★</span>
             Highly dubious information marked in orange.
           </li>
           <li className="flex items-center">
-            <span className="text-green-400 mr-2 md:mr-3 text-2xl lg:text-3xl">★</span>
+            <span className="text-white mr-2 md:mr-3 text-2xl lg:text-3xl">★</span>
             Outright incorrect claims flagged in red.
           </li>
           {/* Positive Checkmarks */}
           <li className="flex items-center">
-            <span className="text-green-400 mr-2 md:mr-3 text-2xl lg:text-3xl">✓</span>
+            <span className="text-white mr-2 md:mr-3 text-2xl lg:text-3xl">✓</span>
             Analyze content accuracy using Python and OpenAI.
           </li>
           <li className="flex items-center">
-            <span className="text-green-400 mr-2 md:mr-3 text-2xl lg:text-3xl">✓</span>
+            <span className="text-white mr-2 md:mr-3 text-2xl lg:text-3xl">✓</span>
             Store and retrieve fact-checking data using MongoDB.
           </li>
           <li className="flex items-center">
-            <span className="text-green-400 mr-2 md:mr-3 text-2xl lg:text-3xl">✓</span>
+            <span className="text-white mr-2 md:mr-3 text-2xl lg:text-3xl">✓</span>
             Get real-time reliability scores out of 100 for each article.
           </li>
         </ul>

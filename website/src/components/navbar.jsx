@@ -14,7 +14,7 @@ function Navbar() {
           <li>
             <a 
               href="#" 
-              className='bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-4 py-2 rounded' // Gradient background for Source Code button
+              className='bg-blue-600 text-white px-4 py-2 rounded' // Gradient background for Source Code button
               style={{ fontWeight: 'normal', fontSize: '0.875rem' }}
             >
               Source Code
