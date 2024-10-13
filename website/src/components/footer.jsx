@@ -3,8 +3,9 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-[20px]">
+      <div className="container mx-auto px-[40px]"> {/* Increased padding from px-[20px] to px-[40px] */}
         <div className="flex flex-wrap justify-between items-center">
+          
           {/* Copyright */}
           <div className="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
             <p>&copy; 2024 Checkmate. All rights reserved.</p>
@@ -23,10 +24,18 @@ function Footer() {
           {/* Social Media Icons */}
           <div className="w-full md:w-1/3 text-center md:text-right">
             <div className="flex justify-center md:justify-end space-x-4">
-              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="Facebook">&#xf082;</a>
-              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="Twitter">&#xf081;</a>
-              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="Instagram">&#xf16d;</a>
-              <a href="#" className="hover:text-gray-300 text-2xl" aria-label="GitHub">&#xf09b;</a>
+              {/* GitHub */}
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300" aria-label="GitHub">
+                <img src={`${process.env.PUBLIC_URL}/github.webp`} alt="GitHub" className="h-6 w-6" /> {/* Icon size reduced to 24px */}
+              </a>
+              {/* LinkedIn */}
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300" aria-label="LinkedIn">
+                <img src={`${process.env.PUBLIC_URL}/LinkedIn.webp`} alt="LinkedIn" className="h-6 w-6" /> {/* Icon size reduced to 24px */}
+              </a>
+              {/* Instagram */}
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300" aria-label="Instagram">
+                <img src={`${process.env.PUBLIC_URL}/instagram.webp`} alt="Instagram" className="h-6 w-6" /> {/* Icon size reduced to 24px */}
+              </a>
             </div>
           </div>
         </div>
