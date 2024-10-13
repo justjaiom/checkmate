@@ -1,11 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Text Copier",
+  "name": "News Article Copier",
   "version": "1.0",
-  "description": "Copies the text of the current webpage.",
+  "description": "Saves the main content of a news article to a file.",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -14,13 +18,5 @@
       "48": "icon48.png",
       "128": "icon128.png"
     }
-  },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
   }
 }

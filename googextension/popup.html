@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Text Copier</title>
+    <title>News Article Copier</title>
     <style>
-      body { 
-        width: 200px; 
-        text-align: center; 
-        font-family: Arial, sans-serif; 
+      body {
+        width: 200px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
       }
       button {
+        width: 100%;
+        padding: 10px;
         background-color: #4CAF50;
         color: white;
-        padding: 10px 20px;
         border: none;
         cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
       }
     </style>
   </head>
   <body>
-    <h2>Copy Text</h2>
-    <button id="copyText">Copy Page Text</button>
-    <script src="popup.js"></script>
+    <button id="copyText">Copy Article Text</button>
   </body>
+  <script src="popup.js"></script>
 </html>
