@@ -35,7 +35,7 @@ function Navbar() {
           <li>
             <a 
               href="https://github.com/justjaiom/checkmate" // Link to your GitHub repository
-              className='bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-4 rounded' // Gradient background and 20px padding
+              className='bg-blue-600 text-white px-6 py-4 rounded' // Gradient background and 20px padding
               style={{ fontWeight: 'normal', fontSize: '0.875rem' }}
             >
 Source Code
