@@ -41,6 +41,12 @@ const FactCheckedArticle = () => {
       <p className="mb-4">
         As we continue to learn more about climate change and its impacts, it's crucial to stay informed and critically evaluate the information we encounter. By understanding the facts and taking action, we can work towards a more sustainable future for our planet.
       </p>
+      <a href="https://github.com/justjaiom/checkmate/tree/react-website" target="_blank" rel="noopener noreferrer">
+
+      <button className="w-64 mt-6 md:mt-8 bg-blue-600 text-white hover:bg-purple-600 px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold text-lg md:text-xl flex items-center justify-center">
+                Get CheckMate
+            </button>
+      </a>
       
     </div>
   );

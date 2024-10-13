@@ -1,9 +1,13 @@
+
 function Navbar() {
   return (
     <nav className='bg-white p-4 px-8'> {/* Navbar background is white */}
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="text-black text-2xl font-bold">Checkmate</div> {/* Logo text is black */}
+        <div className="text-black text-2xl font-bold">
+        <img src={`${process.env.PUBLIC_URL}/Checkmate_logo.png`} alt="My PNG"  className="max-w-48"/>
+
+          </div> {/* Logo text is black */}
 
         {/* Navigation Links */}
         <ul className='hidden md:flex space-x-4'>
