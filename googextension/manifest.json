@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Check Mate",
+  "name": "CheckMate",
   "version": "1.0",
-  "description": "Detects bias",
+  "description": "Introducing a Chrome extension that analyzes blog content for accuracy and bias, giving you real-time feedback to ensure that the information you're reading is reliable.",
   "permissions": [
     "activeTab",
     "scripting",
@@ -12,11 +12,12 @@
     "<all_urls>"
   ],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+    "default_popup": "popup.html"
+    
+  },
+  "icons": {
+      "16": "ext-icon.png",
+      "48": "ext-icon.png",
+      "128": "ext-icon.png"
     }
-  }
 }
