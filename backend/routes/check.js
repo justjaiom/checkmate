@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
-const Claim = require('../models/claims');
+const Claim = require('../models/claim');
 
 // POST /api/fact-check
 router.post('/fact-check', async (req, res) => {
