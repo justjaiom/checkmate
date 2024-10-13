@@ -37,10 +37,10 @@ function saveArticleToFile() {
     });
 
     // If the article text is too small, alert the user
-    if (articleText.trim().length < 50) {
-      alert('Could not extract the article content properly.');
-      return;
-    }
+    // if (articleText.trim().length < 50) {
+    //   alert('Could not extract the article content properly.');
+    //   return;
+    // }
 
     // Create a Blob with the article text and trigger a download
     const blob = new Blob([articleText.trim()], { type: 'text/plain' });
