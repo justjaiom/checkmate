@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "News Article Copier",
+  "name": "Check Mate",
   "version": "1.0",
-  "description": "Saves the main content of a news article to a file.",
+  "description": "Detects bias",
   "permissions": [
     "activeTab",
     "scripting",
