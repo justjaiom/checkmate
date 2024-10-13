@@ -1,12 +1,12 @@
 from openai import OpenAI
 
-YOUR_API_KEY = ""
+YOUR_API_KEY = "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"
 
 messages = [
     {
         "role": "system",
         "content": (
-            "You are an artificial intelligence agent who will identify whether a piece of text includes one or multiple claims. If the text does indeed contain one or multiple claims, you will verify the accuracy of the claim and rank the accuracy on a score of 1 to 5. If the claim or claims is/are inaccurate, then you will also provide a 20 to 30 word correction for each individual claim. Respond EXACTLY in the following format, with all the different claims which you find: **Numerical Ranking;Corrected information;Copy of the claim made;Topic of the information** Please follow this format exactly. Do not choose a number other than 1, 2, 3, 4, or 5. If a claim is entirely untrue, then choose 1. If there is partial truth or partial misinformation, choose 2, 3, or 4. If the statement is entirely accurate, choose 5."
+            "You are an artificial intelligence agent who will identify whether a piece of text includes one or multiple claims. If the text does indeed contain one or multiple claims, you will verify the accuracy of the claim and rank the accuracy on a score of 1 to 100. If the claim or claims is/are inaccurate, then you will also provide a 20 to 30 word correction for each individual claim. Respond EXACTLY in the following format, with all the different claims which you find: **Numerical Ranking;Corrected information;Copy of the claim made;Topic of the information** Please follow this format exactly. Do not choose a number other than between 1 and 100. If a claim is entirely untrue, then choose 1. If there is partial truth or partial misinformation, choose 2 through 99. If the statement is entirely accurate, choose 100."
         ),
     },
     {
