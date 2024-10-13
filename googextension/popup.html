@@ -1,28 +1,69 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Article Copier</title>
     <style>
-      body {
-        width: 200px;
-        padding: 10px;
-        font-family: Arial, sans-serif;
-      }
-      button {
-        width: 100%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #45a049;
-      }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif; 
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+            min-width: 400px; 
+            min-height: 200px; 
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 10px; 
+            width: 100px; 
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 20px; 
+            font-weight: 700;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px; 
+            margin: 10px 0 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            background-color: #007bff; 
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
     </style>
-  </head>
-  <body>
-    <button id="copyText">Copy Article Text</button>
-  </body>
-  <script src="popup.js"></script>
+</head>
+<body>
+    <img src="icon128.png" alt="Logo" class="logo"> <!-- Placeholder for logo -->
+    <h1 class="title">Checkmate: Uncover bias easily.</h1> <!-- Title for clarity -->
+    <p>Quickly copy text from news articles to keep important information handy.</p> <!-- Short description -->
+    <button id="copyText">Copy Article Text</button> <!-- Updated button -->
+
+    <script src="popup.js"></script>
+</body>
 </html>
