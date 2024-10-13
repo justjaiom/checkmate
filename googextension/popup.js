@@ -3,62 +3,53 @@ document.getElementById('copyText').addEventListener('click', function() {
     chrome.scripting.executeScript(
       {
         target: { tabId: tabs[0].id },
-        func: saveArticleToFile
+        func: saveArticleToLocalStorage
       }
     );
   });
 });
 
-function saveArticleToFile() {
+function saveArticleToLocalStorage() {
   setTimeout(() => {
-    // Selectors to temporarily hide instead of removing
+    // Selectors to temporarily hide elements
     const selectorsToHide = [
       'aside', 'footer', 'nav', 'header', 'form', 'button', 'script', 'style', 
       '.advertisement', '.related-links', '.comments', '.sidebar', 
       '.share-buttons', '.related-articles', 'img', 'video', '.subscribe-box'
     ];
 
-    // Store the original display values of elements
+    // Store original display styles to restore them later
     const originalStyles = [];
 
     // Hide elements by setting their display to 'none'
     selectorsToHide.forEach(selector => {
       let elements = document.querySelectorAll(selector);
       elements.forEach(el => {
-        originalStyles.push({ element: el, display: el.style.display });  // Store the original display style
+        originalStyles.push({ element: el, display: el.style.display }); // Store original style
         el.style.display = 'none';  // Hide the element
       });
     });
 
-    // Now select all paragraph elements <p> and headers for content extraction
+    // Extract visible paragraphs and headers for content
     const contentElements = document.querySelectorAll('p');
     let articleText = '';
 
     contentElements.forEach(el => {
-      // Ensure we only grab visible paragraphs and ignore empty ones
       if (el.innerText.trim()) {
-        articleText += el.innerText + '\n\n';
+        articleText += el.innerText + '\n\n';  // Append text with spacing
       }
     });
 
-    // Create a Blob with the article text and trigger a download
-    const blob = new Blob([articleText.trim()], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
+    // Save article content to LocalStorage
+    localStorage.setItem('savedArticle', articleText.trim());
 
-    // Create a temporary anchor element to trigger the download
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'bufferfile.txt';  // Name the file "bufferfile.txt"
-    document.body.appendChild(link);
-    link.click();  // Programmatically click the link to trigger the download
-    document.body.removeChild(link);  // Remove the link after download
-    URL.revokeObjectURL(url);  // Revoke the object URL after the download
+    console.log('Article saved to LocalStorage:', articleText);
 
-    // Restore the hidden elements to their original display styles
+    // Restore hidden elements to original styles
     originalStyles.forEach(item => {
-      item.element.style.display = item.display;  // Restore original display style
+      item.element.style.display = item.display;  // Restore original display
     });
 
-    alert('Article content saved to file!');
-  }, 1000); // 1-second delay to wait for dynamic content
+    alert('Article content saved to LocalStorage!');
+  }, 1000);  // 1-second delay for dynamic content loading
 }
