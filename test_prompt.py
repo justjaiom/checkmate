@@ -1,7 +1,11 @@
 from openai import OpenAI
 import os
 
+<<<<<<< HEAD
 API_KEY = "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"
+=======
+YOUR_API_KEY = ""
+>>>>>>> 136fbfa40f19bf84f77f6774a5dcc728d785fd8c
 
 messages = [
     {
