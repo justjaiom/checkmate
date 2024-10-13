@@ -11,52 +11,54 @@ document.getElementById('copyText').addEventListener('click', function() {
 
 function saveArticleToFile() {
   setTimeout(() => {
-    const selectorsToRemove = [
+    // Selectors to temporarily hide instead of removing
+    const selectorsToHide = [
       'aside', 'footer', 'nav', 'header', 'form', 'button', 'script', 'style', 
       '.advertisement', '.related-links', '.comments', '.sidebar', 
       '.share-buttons', '.related-articles', 'img', 'video', '.subscribe-box'
     ];
 
-    selectorsToRemove.forEach(selector => {
+    // Store the original display values of elements
+    const originalStyles = [];
+
+    // Hide elements by setting their display to 'none'
+    selectorsToHide.forEach(selector => {
       let elements = document.querySelectorAll(selector);
-      elements.forEach(el => el.remove());
+      elements.forEach(el => {
+        originalStyles.push({ element: el, display: el.style.display });  // Store the original display style
+        el.style.display = 'none';  // Hide the element
+      });
     });
 
+    // Now select all paragraph elements <p> and headers for content extraction
     const contentElements = document.querySelectorAll('p');
     let articleText = '';
 
     contentElements.forEach(el => {
+      // Ensure we only grab visible paragraphs and ignore empty ones
       if (el.innerText.trim()) {
         articleText += el.innerText + '\n\n';
       }
     });
 
+    // Create a Blob with the article text and trigger a download
     const blob = new Blob([articleText.trim()], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
+
+    // Create a temporary anchor element to trigger the download
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'article.txt';
+    link.download = 'bufferfile.txt';  // Name the file "bufferfile.txt"
     document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    link.click();  // Programmatically click the link to trigger the download
+    document.body.removeChild(link);  // Remove the link after download
+    URL.revokeObjectURL(url);  // Revoke the object URL after the download
 
-    // After saving the file, send the article content to MongoDB via API
-    fetch('http://localhost:3000/save-article', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ content: articleText.trim() })
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.message); // "Article saved successfully!"
-    })
-    .catch(err => {
-      console.error('Error:', err);
+    // Restore the hidden elements to their original display styles
+    originalStyles.forEach(item => {
+      item.element.style.display = item.display;  // Restore original display style
     });
 
-    alert('Article content saved to file and sent to MongoDB!');
-  }, 1000);
+    alert('Article content saved to file!');
+  }, 1000); // 1-second delay to wait for dynamic content
 }
