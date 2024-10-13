@@ -1,7 +1,7 @@
 
 function Navbar() {
   return (
-    <nav className='bg-white p-4 px-8'> {/* Navbar background is white */}
+    <nav className='bg-white px-8'> {/* Navbar background is white */}
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="text-black text-2xl font-bold">
