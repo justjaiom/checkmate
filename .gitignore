@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+
+# Build directories
+dist/
+build/
+
+# Compiled binaries
+*.out
+
+#python test
+test_prompt.py

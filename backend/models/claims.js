@@ -1,4 +1,4 @@
-// backend/models/Claim.js
+// backend/models/claim.js
 
 const mongoose = require('mongoose');
 

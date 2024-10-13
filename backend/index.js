@@ -27,7 +27,7 @@ app.listen(PORT, () => {
 });
 
 // Import routes
-const factCheckRoutes = require('./routes/factCheck');
+const factCheckRoutes = require('./routes/check');
 const claimRoutes = require('./routes/claims'); // New route file
 app.use('/api', factCheckRoutes);
 app.use('/api', claimRoutes); // Use the new routes

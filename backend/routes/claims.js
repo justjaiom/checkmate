@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Claim = require('../models/claim');
+const Claim = require('../models/claims');
 
 // GET /api/claims/recent
 router.get('/claims/recent', async (req, res) => {
