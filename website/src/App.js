@@ -6,7 +6,7 @@ import Footer from './components/footer';
 
 function App() {
   return (
-    <div className='app-container lg: text-lg xl: text-5xl'>
+    <div className='app-container'>
       <Navbar></Navbar>
       <Hero></Hero>
       <Footer></Footer>

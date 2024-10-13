@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-[20px]">
         <div className="flex flex-wrap justify-between items-center">
           {/* Copyright */}
           <div className="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">

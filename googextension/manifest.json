@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "CheckMate",
+  "version": "1.0",
+  "description": "Introducing a Chrome extension that analyzes blog content for accuracy and bias, giving you real-time feedback to ensure that the information you're reading is reliable.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+    
+  },
+  "icons": {
+      "16": "ext-icon.png",
+      "48": "ext-icon.png",
+      "128": "ext-icon.png"
+    }
+}
