@@ -44,7 +44,7 @@ function Hero() {
           </li>
         </ul>
 
-        <a href="https://github.com/justjaiom/checkmate/tree/react-website" target="_blank" rel="noopener noreferrer" className="mt-6 md:mt-8">
+        <a href="https://github.com/justjaiom/checkmate/blob/react-website/readme.md" target="_blank" rel="noopener noreferrer" className="mt-6 md:mt-8">
           <button className="w-64 bg-white text-purple-600 hover:bg-gray-100 px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold text-lg md:text-xl flex items-center justify-center">
             Learn More
           </button>
